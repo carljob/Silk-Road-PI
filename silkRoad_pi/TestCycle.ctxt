@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TestCycle
+comment0.text=\r\n\ Clase\ de\ prueba\ para\ la\ simulaci\u00F3n\ SilkRoad.\r\n\ \r\n\ Este\ programa\ realiza\ un\ ciclo\ completo\ de\ operaciones\ basicas\ en\ la\ Ruta\ de\ la\ Seda\r\n\ Crear\ la\ ruta\ con\ una\ longitud\ especifica\r\n\ Colocar\ tiendas\ y\ robots\ en\ posiciones\ determinadas\r\n\ Mover\ un\ robot\ y\ calcular\ la\ ganancia\ acumulada\r\n\ Reabastecer\ las\ tiendas\ y\ devolver\ los\ robots\ a\ sus\ posiciones\ iniciales\r\n\ Verificar\ el\ estado\ de\ las\ operaciones\ usando\r\n\ Este\ test\ permite\ observar\ el\ comportamiento\ de\ la\ simulacion\ y\ validar\ la\r\n\ interaccion\ entre\ robots\ tiendas\ y\ la\ acumulacion\ de\ ganancias\r\n\ \r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Metodo\ principal\ que\ ejecuta\ un\ ciclo\ de\ prueba\ completo\ en\ SilkRoad\r\n
+numComments=2

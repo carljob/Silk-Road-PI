@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ColorManager
+comment0.text=\r\n\ Clase\ que\ gestiona\ colores\ \r\n\ Esta\ clase\ se\ utiliza\ para\ asignar\ colores\ \r\n
+comment1.params=
+comment1.target=ColorManager()
+comment1.text=\r\n\ Inicializa\ la\ lista\ de\ colores\ con\ los\ valores\r\n\ "red",\ "blue",\ "green",\ "yellow",\ "magenta",\ "black"\r\n
+comment2.params=
+comment2.target=java.lang.String\ nextColor()
+comment2.text=\r\n\ Retorna\ el\ siguiente\ color\ de\ manera\ ciclica\r\n\ Una\ vez\ alcanzado\ el\ final\ de\ la\ lista\ el\ indice\ se\ reinicia\r\n
+numComments=3
