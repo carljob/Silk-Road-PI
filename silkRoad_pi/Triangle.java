@@ -168,6 +168,13 @@ public class Triangle{
             canvas.wait(10);
         }
     }
+    
+    public void setAbsolutePosition(int newX, int newY) {
+        erase();
+        xPosition = newX;
+        yPosition = newY;
+        draw();
+    }
 
     /*
      * Erase the triangle on screen.

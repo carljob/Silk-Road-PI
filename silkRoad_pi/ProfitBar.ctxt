@@ -1,10 +1,11 @@
 #BlueJ class context
 comment0.target=ProfitBar
-comment0.text=\r\n\ \=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\ idea\ de\ IAGen\ \=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\r\n\ Representa\ una\ barra\ de\ progreso\ gr\u00E1fica\ que\ muestra\ la\ ganancia\ acumulada\r\n\ en\ la\ simulaci\u00F3n\ de\ SilkRoad.\r\n\ \r\n\ \r\n\ La\ barra\ tiene\ un\ valor\ m\u00E1ximo\ determinado\ al\ crearla,\ y\ se\ puede\ actualizar\r\n\ dinamicamente\ mediante\ el\ metodo\ \ Se\ muestra\ en\r\n\ un\ JFrame\ independiente.\r\n\ \r\n
 comment1.params=maxProfit
 comment1.target=ProfitBar(int)
-comment1.text=\r\n\ Constructor\ que\ crea\ una\ ventana\ con\ una\ barra\ de\ progreso\ inicializada\r\n\ @param\ maxProfit\ Ganancia\ maxima\ que\ la\ barra\ puede\ mostrar\r\n
 comment2.params=profit
 comment2.target=void\ updateProfit(int)
-comment2.text=\r\n\ Actualiza\ la\ barra\ de\ progreso\ con\ la\ ganancia\ actual\r\n\ Si\ el\ valor\ de\ la\ ganancia\ excede\ el\ m\u00E1ximo,\ se\ limita\ a\r\n\ @param\ profit\ Ganancia\ actual\ a\ mostrar\ en\ la\ barra\r\n
-numComments=3
+comment2.text=Actualiza\ el\ valor\ actual\ de\ la\ barra
+comment3.params=maxProfit
+comment3.target=void\ setMaxProfit(int)
+comment3.text=Si\ cambia\ el\ m\u00E1ximo\ de\ ganancias\ posibles
+numComments=4

@@ -172,6 +172,21 @@ public class Rectangle{
             canvas.wait(10);
         }
     }
+    
+    public void setPosition(int newX, int newY) {
+        int dx = newX - xPosition;
+        int dy = newY - yPosition;
+        moveHorizontal(dx);
+        moveVertical(dy);
+    }
+    
+    public void setAbsolutePosition(int newX, int newY) {
+        erase();
+        xPosition = newX;
+        yPosition = newY;
+        draw();
+    }
+
 
     /*
      * Erase the rectangle on screen.

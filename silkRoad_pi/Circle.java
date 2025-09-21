@@ -218,6 +218,21 @@ public class Circle{
         }
     }
     
+    public void setPosition(int newX, int newY) {
+        int dx = newX - xPosition;
+        int dy = newY - yPosition;
+        moveHorizontal(dx);
+        moveVertical(dy);
+    }
+    
+    public void setAbsolutePosition(int newX, int newY) {
+        erase();
+        xPosition = newX;
+        yPosition = newY;
+        draw();
+    }
+
+
     public void discoTime(int time){
         String[] colors = {"red", "green", "blue", "yellow", "magenta", "black"};
         for(int i = 0; i < time; i++){
