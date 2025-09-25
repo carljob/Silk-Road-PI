@@ -33,7 +33,6 @@ public class SilkRoad {
         }
     }
 
-    // ===== API =====
 
     /** Coloca una tienda en una ubicación específica */
     public void placeStore(int location, int tenges) {
@@ -56,7 +55,7 @@ public class SilkRoad {
                 nueva.makeVisible();
             }
 
-            actualizarMaxProfit(); // ⚡ actualizar la barra
+            actualizarMaxProfit(); 
             lastOk = true;
         }
     }
@@ -100,7 +99,7 @@ public class SilkRoad {
                 s.makeInvisible();
                 if (cells[location] != null) cells[location].clear();
             }
-            actualizarMaxProfit(); // ⚡ actualizar la barra
+            actualizarMaxProfit(); 
             lastOk = true;
             return;
         }
@@ -119,7 +118,7 @@ public class SilkRoad {
             stores.remove(keyToRemove);
             toRemove.makeInvisible();
             if (cells[location] != null) cells[location].clear();
-            actualizarMaxProfit(); // ⚡ actualizar la barra
+            actualizarMaxProfit(); 
             lastOk = true;
         } else {
             lastOk = false;
@@ -175,7 +174,7 @@ public class SilkRoad {
             for (Store s : stores.values()) {
                 s.resupply();
             }
-            actualizarMaxProfit(); // ⚡ actualizar la barra
+            actualizarMaxProfit(); 
             lastOk = true;
         }
     }
@@ -213,14 +212,14 @@ public class SilkRoad {
      * @param meters cantidad de celdas a mover (puede ser negativa para mover hacia atrás)
      */
     public void moveRobot(int location, int meters) {
-        // Validación de la ubicación inicial
+     
         if (location < 0 || location >= length) {
             lastOk = false;
             if (visible) System.out.println("Ubicación inválida para mover: " + location);
             return;
         }
     
-        // Buscar el robot en el mapa o por su ubicación actual
+    
         Robot robot = robots.get(location);
         Integer sourceKey = null;
     
@@ -236,14 +235,12 @@ public class SilkRoad {
             sourceKey = location;
         }
     
-        // Robot no encontrado
         if (robot == null) {
             lastOk = false;
             if (visible) System.out.println("Robot no encontrado en celda: " + location);
             return;
         }
-    
-        // Calcular nueva posición y validar límites
+
         int oldPos = robot.getCurrentLocation();
         int newPos = oldPos + meters;
         if (newPos < 0 || newPos >= length) {
@@ -251,8 +248,7 @@ public class SilkRoad {
             if (visible) System.out.println("El robot salió de la ruta");
             return;
         }
-    
-        // Verificar si la celda de destino está ocupada
+
         boolean occupied = false;
         for (Map.Entry<Integer, Robot> e : robots.entrySet()) {
             Robot r = e.getValue();
@@ -268,7 +264,6 @@ public class SilkRoad {
             return;
         }
     
-        // Mover el robot
         robot.makeInvisible();
         if (cells[oldPos] != null) cells[oldPos].clear();
         robot.move(meters);
@@ -276,14 +271,12 @@ public class SilkRoad {
             robot.placeInCell(cells[newPos]);
             robot.makeVisible();
         }
-    
-        // Actualizar mapa de robots
+
         if (sourceKey != null && !sourceKey.equals(newPos)) {
             robots.remove(sourceKey);
         }
         robots.put(newPos, robot);
     
-        // Interacción con tienda si existe
         Store store = stores.get(newPos);
         if (store != null && !store.isEmptiedToday()) {
             int distancia = Math.abs(newPos - oldPos);
@@ -295,7 +288,6 @@ public class SilkRoad {
             store.empty();
         }
     
-        // Registrar orden de llegada
         robot.setOrderOfArrival(arrivalCounter++);
         lastOk = true;
     }
@@ -375,7 +367,6 @@ public class SilkRoad {
         return lastOk;
     }
 
-    // ===== Métodos auxiliares =====
     public int getCellSize() {
         return cellSize;
     }
